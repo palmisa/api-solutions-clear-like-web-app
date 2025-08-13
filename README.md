@@ -1,69 +1,79 @@
-# React + TypeScript + Vite
+# Clear-Like Web App (React + Vite + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ClearLike application that is inspired by Clear, an identity provider application that offers its clients an additional layer of user validation—ensuring that users are who they claim to be when authenticating or performing sensitive actions, such as completing a purchase flow.
 
-Currently, two official plugins are available:
+This is a web application built with [React](https://react.dev/), [Vite](https://vitejs.dev/), and [TypeScript](https://www.typescriptlang.org/), designed for fast development and optimized builds.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- `src/` — Main source code of the application.
+- `public/` — Static assets served as-is.
+- `index.html` — HTML entry point.
+- `vite.config.ts` — Vite configuration file.
+- `tsconfig*.json` — TypeScript configuration files.
+- `package.json` & `package-lock.json` — Project dependencies and scripts.
+- `.gitignore` — Files and folders ignored by Git.
+- `eslint.config.js` — ESLint configuration for code quality.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📦 Main Dependencies
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **react** — UI library for building interactive interfaces.
+- **react-dom** — React DOM renderer.
+- **vite** — Next-generation frontend build tool.
+- **typescript** — Typed JavaScript for large-scale apps.
+- **@vitejs/plugin-react** — React plugin for Vite with Fast Refresh.
+
+---
+
+## ⚙️ Prerequisites
+
+Before running this app, make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- npm (comes with Node.js)
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+
+```bash
+git clone https://gitlab.verizon.com/api-solution-team/api-solutions-clear-like-web-app.git
+cd api-solutions-clear-like-web-app
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Install dependencies**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3. **Start the development server**
+
+```bash
+npm run dev
+```
+
+---
+
+💻 Running the App
+Once started, Vite will display a local URL in the terminal, for example:
+
+```bash
+Local:   http://localhost:5173/
+```
+Open this URL in your browser to view the app.
+
+---
+
+## 📝 Notes
+
+- Place static files like images or icons inside the public/ folder.
+- Modify files inside the src/ folder to start building your app.
+- For more details, check the [Vite Documentation](https://vite.dev/) and [React Documentation](https://react.dev/).
+
