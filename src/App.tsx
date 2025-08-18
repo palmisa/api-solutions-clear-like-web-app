@@ -1,4 +1,6 @@
-import './App.css'
+import "./App.css";
+
+const SHOPPING_APP_LINK = "com.verizon.shopping://";
 
 function App() {
   return (
@@ -6,14 +8,10 @@ function App() {
       <h1>Clear Like App</h1>
 
       <div className="card">
-        <a
-          href="https://palmisa.github.io/api-solutions-clear-like-web-app/link/123"
-        >
-          Back to Shopping App.
-        </a>
+        <a href={SHOPPING_APP_LINK}>Back to Shopping App.</a>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
