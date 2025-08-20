@@ -1,0 +1,3 @@
+- name: Set environment variables
+  run: echo "VITE_APP_ID=${{ secrets.APP_ID }}" >> .env
+  run: echo "VITE_APP_DEEP_LINK=${{ secrets.APP_DEEP_LINK }}" >> .env

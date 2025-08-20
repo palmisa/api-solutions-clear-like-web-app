@@ -1,6 +1,6 @@
 import "./App.css";
 
-const SHOPPING_APP_LINK = "com.verizon.shopping://";
+const SHOPPING_APP_LINK = import.meta.env.VITE_APP_DEEP_LINK;
 
 function App() {
   return (
