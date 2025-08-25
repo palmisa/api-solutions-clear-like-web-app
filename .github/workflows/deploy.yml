@@ -22,6 +22,8 @@ jobs:
         run: |
           echo "VITE_APP_ID=${{ secrets.APP_ID }}" >> .env
           echo "VITE_APP_DEEP_LINK=${{ secrets.APP_DEEP_LINK }}" >> .env
+          echo "VITE_PROTECT_APP_ANDROID=${{ secrets.PROTECT_APP_ANDROID }}" >> .env
+          echo "VITE_CLIENT_ID=${{ secrets.CLIENT_ID }}" >> .env
 
       - name: Build
         run: npm run build
